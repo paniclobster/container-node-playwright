@@ -9,7 +9,7 @@ jobs:
   build-publish:
     uses: paniclobster/github-workflows/.github/workflows/docker-build-publish.yaml@main
     with:
-      docker_image_name: ghcr.io/paniclobster/docker-node-playwright
+      docker_image_name: ghcr.io/${{ env.GITHUB_REPOSITORY }}
     secrets:
       docker_login_registry: ghcr.io
       docker_login_username: ${{ github.actor }}
